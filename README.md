@@ -1,2 +1,2 @@
 # codestroke-redesign
-Redesign of the codestroke web app fro consistency &amp; responsiveness
+Redesign of the codestroke web app for consistency &amp; responsiveness
