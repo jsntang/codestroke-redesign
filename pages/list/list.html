@@ -5,6 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Codestroke</title>
 
+        <!-- External Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+        <!-- OneSignal -->
+        <link rel="manifest" href="/manifest.json" />
+        <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+        <script src="./onesignal_init.js"></script>
+
+        <!-- Local Script -->
+        <script src="./placeholder.js"></script>
+
+
         <!-- CSS -->
         <link rel="stylesheet" href="./../../global/styles/normalize.css" />
         <link rel="stylesheet" href="list.min.css" />
@@ -21,7 +33,9 @@
                     <strong>CODE</strong> Stroke
                 </div>
                 <div class="list-header-options">
-                    <i class="far fa-bell"></i>
+                    <div>
+                        <i class="far fa-bell-slash fa-fw" id="notification-button" style="cursor: pointer"></i>
+                    </div>
                     <i class="fas fa-sign-out-alt"></i>
                 </div>
             </header>
