@@ -1,0 +1,178 @@
+@import './../../global/styles/global';
+
+.list-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: none;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.list-header {
+    z-index: 90;
+
+    width: 100%;
+    flex: 0 0 8vh;
+    min-height: 40px;
+    overflow: hidden;
+
+    //@include pad-hor(1rem);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: linear-gradient(to right, #ff730a, #ff8120, #ff8e31, #ff9a41, #ffa551);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+
+    &-menu {
+        font-size: 2rem;
+        @include for-tablet-portrait-up {
+            font-size: 3rem;
+        }
+        color: #FFF5EE;
+
+        i {
+            margin-left: 2vw;
+        }
+    }
+
+    &-logo {
+        height: 100%;
+
+        font-size: 2.5rem;
+        @include for-tablet-portrait-up {
+            font-size: 3rem;
+        }
+        color: white;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            height: 80%;
+            @include for-tablet-portrait-up {
+                height: 90%;
+            }
+            width: auto;
+        }
+    }
+
+    &-options {
+        font-size: 2rem;
+        @include for-tablet-portrait-up {
+            font-size: 2.5rem;
+        }
+        color: #FFF5EE;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        i {
+            margin-right: 2vw;
+        }
+    }
+
+}
+
+.list-main {
+    width: 100%;
+    flex: 0 0 92vh;
+
+    padding-top: 2vh;
+
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include for-desktop-up {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+    background: #FFF5EE;
+}
+
+.list-table {
+    margin-bottom: 5%;
+
+    width: 97%;
+    @include for-tablet-portrait-up {
+        width: 90%;
+    }
+
+    @include for-desktop-up {
+        max-width: 30vw;
+    }
+
+    border-collapse: collapse;
+    table-layout: fixed;
+
+    font-size: 1.35rem;
+
+    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.35);
+
+    &.incoming {
+        tr:not(.list-table-divider) {background: $colour-incoming-light;}
+        tr:nth-of-type(odd) {background: rgba($colour-incoming-light, 0.8)};
+        .list-table-title {background: $colour-incoming-dark;}
+    }
+    &.active {
+        tr:not(.list-table-divider) {background: $colour-active-light;}
+        tr:nth-of-type(odd) {background: rgba($colour-active-light, 0.8)};
+        .list-table-title {background: $colour-active-dark;}
+    }
+    &.completed {
+        tr:not(.list-table-divider) {background: $colour-completed-light;}
+        tr:nth-of-type(odd) {background: rgba($colour-completed-light, 0.6)};
+        .list-table-title {background: $colour-completed-dark;}
+    }
+
+    tr {
+        margin: 0;
+    }
+
+    td {
+        vertical-align: middle;
+        text-align: center;
+
+        @include pad-hor (1rem);
+        @include pad-vert (0.5rem);
+
+
+    }
+
+}
+
+.list-table-title {
+    width: 100%;
+    @include pad-hor (3rem);
+    @include pad-vert (0.5rem);
+
+    font-size: 2rem;
+    @include for-tablet-portrait-up {
+        font-size: 3rem;
+    }
+
+    //background: $colour-incoming-dark;
+}
+
+.list-table-header {
+    font-size: 1.5rem;
+    @include for-tablet-portrait-up {
+        font-size: 2rem;
+    }
+    font-variant-caps: all-small-caps;
+}
+
+.list-table-divider {
+    height: 0.25rem;
+    background-color: transparent;
+}

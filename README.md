@@ -1,2 +1,1 @@
-# codestroke-redesign
-Redesign of the codestroke web app for consistency &amp; responsiveness
+# codestroke-web-new

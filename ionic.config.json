@@ -1,7 +1,0 @@
-{
-  "name": "codestroke-redesign",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "ionic-angular"
-}
