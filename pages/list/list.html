@@ -11,7 +11,20 @@
         <!-- OneSignal -->
         <link rel="manifest" href="/manifest.json" />
         <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-        <script src="./onesignal_init.js"></script>
+        <script>
+            var OneSignal = window.OneSignal || [];
+                OneSignal.push(function() {
+                    OneSignal.init({
+                      appId: "7e8e43b8-5253-41e3-8975-057dd60e2b1f",
+                      autoRegister: false,
+                        notifyButton: {
+                            enable: true,
+                        },
+                    });
+                });
+                notificationClickHandlerMatch: 'origin',
+                notificationClickHandlerAction: 'focus',
+        </script>
 
         <!-- Local Script -->
         <script src="./placeholder.js"></script>
