@@ -22,13 +22,13 @@
                         },
                     });
                 });
-//                notificationClickHandlerMatch: 'origin',
-//                notificationClickHandlerAction: 'focus',
+        //                notificationClickHandlerMatch: 'origin',
+        //                notificationClickHandlerAction: 'focus',
         </script>
 
         <!-- Local Script -->
         <script src="./placeholder.js"></script>
-
+        <script src="./list.js"></script>
 
         <!-- CSS -->
         <link rel="stylesheet" href="./../../global/styles/normalize.css" />
@@ -37,178 +37,196 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <body>
         <div class="list-container">
-            <header class="list-header">
-                <div class="list-header-menu">
-                    <i class="fas fa-bars"></i>
+            <nav id="js-menu" class="list-menu">
+                <div id="js-menu-close" class="list-menu-back">
+                    Close <i class="fas fa-times"></i>
                 </div>
-                <div class="list-header-logo">
-                    <img src="./../../global/images/logo-white.png"/>
-                    <strong>CODE</strong> Stroke
-                </div>
-                <div class="list-header-options">
-                    <div>
-                        <i class="far fa-bell-slash fa-fw" id="notification-button" style="cursor: pointer"></i>
+                <!-- <div class="list-menu-welcome">
+                    <span>Welcome Back,</span> <strong>Daniel Shell</strong>
+                </div> -->
+                <button class="list-menu-button">
+                    <i class="fas fa-plus"></i> <span>Add Case</span>
+                </button>
+
+                <button class="list-menu-button">
+                    <i class="far fa-list-alt"></i> <span>Event Log</span>
+                </button>
+            </nav>
+            <div id="js-list-body" class="list-body">
+                <header class="list-header">
+
+                    <button id="js-menu-open" class="list-header-menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="list-header-logo">
+                        <img src="./../../global/images/logo-white.png"/>
+                        <strong>CODE</strong> Stroke
                     </div>
-                    <i class="fas fa-sign-out-alt"></i>
-                </div>
-            </header>
-            <main class="list-main">
+                    <div class="list-header-options">
+                        <div>
+                            <i class="far fa-bell-slash fa-fw" id="notification-button" style="cursor: pointer"></i>
+                        </div>
+                        <i class="fas fa-sign-out-alt"></i>
+                    </div>
+                </header>
+                <main class="list-main">
 
-                <table class="list-table incoming">
-                    <tr>
-                        <td colspan="3" class="list-table-title">
-                            Incoming
-                        </td>
-                    </tr>
-                    <tr class="list-table-header">
-                        <td>
-                            Patient
-                        </td>
-                        <td>
-                            Age / Sex
-                        </td>
-                        <td>
-                            ETA
-                        </td>
-                    </tr>
-                    <tr class="list-table-divider">
+                    <table class="list-table incoming">
+                        <tr>
+                            <td colspan="3" class="list-table-title">
+                                Incoming
+                            </td>
+                        </tr>
+                        <tr class="list-table-header">
+                            <td>
+                                Patient
+                            </td>
+                            <td>
+                                Age / Sex
+                            </td>
+                            <td>
+                                ETA
+                            </td>
+                        </tr>
+                        <tr class="list-table-divider">
 
-                    </tr>
-                    <tr>
-                        <td>
-                            David Copperfield
-                        </td>
-                        <td>
-                            75M
-                        </td>
-                        <td>
-                            18:56 (06/07)
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Test
-                        </td>
-                        <td>
-                            Test
-                        </td>
-                        <td>
-                            Test
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Test
-                        </td>
-                        <td>
-                            Test
-                        </td>
-                        <td>
-                            Test
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Test
-                        </td>
-                        <td>
-                            Test
-                        </td>
-                        <td>
-                            Test
-                        </td>
-                    </tr>
-                </table>
+                        </tr>
+                        <tr>
+                            <td>
+                                David Copperfield
+                            </td>
+                            <td>
+                                75M
+                            </td>
+                            <td>
+                                18:56 (06/07)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Test
+                            </td>
+                            <td>
+                                Test
+                            </td>
+                            <td>
+                                Test
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Test
+                            </td>
+                            <td>
+                                Test
+                            </td>
+                            <td>
+                                Test
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Test
+                            </td>
+                            <td>
+                                Test
+                            </td>
+                            <td>
+                                Test
+                            </td>
+                        </tr>
+                    </table>
 
-                <table class="list-table active">
-                    <tr>
-                        <td colspan="3" class="list-table-title">
-                            Active
-                        </td>
-                    </tr>
-                    <tr class="list-table-header">
-                        <td>
-                            Patient
-                        </td>
-                        <td>
-                            Age / Sex
-                        </td>
-                        <td>
-                            ETA
-                        </td>
-                    </tr>
-                    <tr class="list-table-divider">
+                    <table class="list-table active">
+                        <tr>
+                            <td colspan="3" class="list-table-title">
+                                Active
+                            </td>
+                        </tr>
+                        <tr class="list-table-header">
+                            <td>
+                                Patient
+                            </td>
+                            <td>
+                                Age / Sex
+                            </td>
+                            <td>
+                                ETA
+                            </td>
+                        </tr>
+                        <tr class="list-table-divider">
 
-                    </tr>
-                    <tr>
-                        <td>
-                            Test
-                        </td>
-                        <td>
-                            Test
-                        </td>
-                        <td>
-                            Test
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Test
-                        </td>
-                        <td>
-                            Test
-                        </td>
-                        <td>
-                            Test
-                        </td>
-                    </tr>
-                </table>
+                        </tr>
+                        <tr>
+                            <td>
+                                Test
+                            </td>
+                            <td>
+                                Test
+                            </td>
+                            <td>
+                                Test
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Test
+                            </td>
+                            <td>
+                                Test
+                            </td>
+                            <td>
+                                Test
+                            </td>
+                        </tr>
+                    </table>
 
-                <table class="list-table completed">
-                    <tr>
-                        <td colspan="3" class="list-table-title">
-                            Complete
-                        </td>
-                    </tr>
-                    <tr class="list-table-header">
-                        <td>
-                            Patient
-                        </td>
-                        <td>
-                            Age / Sex
-                        </td>
-                        <td>
-                            ETA
-                        </td>
-                    </tr>
-                    <tr class="list-table-divider">
+                    <table class="list-table completed">
+                        <tr>
+                            <td colspan="3" class="list-table-title">
+                                Complete
+                            </td>
+                        </tr>
+                        <tr class="list-table-header">
+                            <td>
+                                Patient
+                            </td>
+                            <td>
+                                Age / Sex
+                            </td>
+                            <td>
+                                ETA
+                            </td>
+                        </tr>
+                        <tr class="list-table-divider">
 
-                    </tr>
-                    <tr>
-                        <td>
-                            Test
-                        </td>
-                        <td>
-                            Test
-                        </td>
-                        <td>
-                            Test
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Test
-                        </td>
-                        <td>
-                            Test
-                        </td>
-                        <td>
-                            Test
-                        </td>
-                    </tr>
-                </table>
+                        </tr>
+                        <tr>
+                            <td>
+                                Test
+                            </td>
+                            <td>
+                                Test
+                            </td>
+                            <td>
+                                Test
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Test
+                            </td>
+                            <td>
+                                Test
+                            </td>
+                            <td>
+                                Test
+                            </td>
+                        </tr>
+                    </table>
 
-            </main>
+                </main>
+            </div>
         </div>
     </body>
 </html>
