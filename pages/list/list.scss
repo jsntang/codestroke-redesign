@@ -28,14 +28,14 @@ $menu-time: 0.5s;
 
     transition: margin $menu-time ease;
 
-    &.inactive {
+    /*&.inactive {
         margin-left: 80vw;
         @include for-tablet-portrait-up {
             margin-left: 450px;
         }
 
         transition: margin $menu-time;
-    }
+    }*/
 
     &::after {
         content: "";
@@ -69,10 +69,9 @@ $menu-time: 0.5s;
         max-width: 450px;
     }
     height: 100vh;
-    z-index: $header-z + 1; //Higher than header
+    z-index: $header-z + 2; //Higher than header
 
     background: #FFDAB9;
-
 
     transform: translateX(-100%);
     transition: transform $menu-time;
@@ -85,7 +84,7 @@ $menu-time: 0.5s;
     }
 
     &-back {
-        margin-bottom: 2rem;
+        margin-bottom: 1.25rem;
 
         height: $header-height;
         min-height: $header-min-height;
@@ -94,7 +93,7 @@ $menu-time: 0.5s;
 
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: flex-start;
 
         font-size: 1.5rem;
         @include for-tablet-portrait-up {
@@ -108,7 +107,8 @@ $menu-time: 0.5s;
         cursor: pointer;
 
         i {
-            margin-left: 1rem;
+            margin-right: 1rem;
+            font-size: 3rem;
         }
     }
 
@@ -284,8 +284,7 @@ $menu-time: 0.5s;
         text-align: center;
 
         @include pad-hor (1rem);
-        @include pad-vert (0.5rem);
-
+        @include pad-vert (0.9rem);
 
     }
 
