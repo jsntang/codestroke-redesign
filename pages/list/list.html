@@ -36,41 +36,39 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <body>
-        <div class="list-container">
-            <nav id="js-menu" class="list-menu">
-                <div id="js-menu-close" class="list-menu-back">
-                    <i class="fas fa-times"></i> Close 
+        <div class="global-container">
+            <header class="global-header">
+                <button id="js-menu-open" class="global-header-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="global-header-logo">
+                    <img src="./../../global/images/logo-white.png"/>
+                    <strong>CODE</strong> Stroke
                 </div>
-                <!-- <div class="list-menu-welcome">
-                    <span>Welcome Back,</span> <strong>Daniel Shell</strong>
-                </div> -->
-                <button class="list-menu-button">
-                    <i class="fas fa-plus"></i> <span>Add Case</span>
-                </button>
-
-                <button class="list-menu-button">
-                    <i class="far fa-list-alt"></i> <span>Event Log</span>
-                </button>
-            </nav>
-            <div id="js-list-body" class="list-body">
-                <header class="list-header">
-
-                    <button id="js-menu-open" class="list-header-menu">
-                        <i class="fas fa-bars"></i>
+                <div class="global-header-options">
+                    <div>
+                        <i class="far fa-bell-slash fa-fw" id="notification-button" style="cursor: pointer"></i>
+                    </div>
+                    <i class="fas fa-sign-out-alt"></i>
+                </div>
+            </header>
+            <main class="global-main">
+                <nav id="js-menu" class="global-menu">
+                    <div id="js-menu-close" class="global-menu-close">
+                        <i class="fas fa-times"></i> Close
+                    </div>
+                    <!-- <div class="list-menu-welcome">
+                        <span>Welcome Back,</span> <strong>Daniel Shell</strong>
+                    </div> -->
+                    <button class="global-menu-button">
+                        <i class="fas fa-plus"></i> <span>Add Case</span>
                     </button>
-                    <div class="list-header-logo">
-                        <img src="./../../global/images/logo-white.png"/>
-                        <strong>CODE</strong> Stroke
-                    </div>
-                    <div class="list-header-options">
-                        <div>
-                            <i class="far fa-bell-slash fa-fw" id="notification-button" style="cursor: pointer"></i>
-                        </div>
-                        <i class="fas fa-sign-out-alt"></i>
-                    </div>
-                </header>
-                <main class="list-main">
 
+                    <button class="global-menu-button">
+                        <i class="far fa-list-alt"></i> <span>Event Log</span>
+                    </button>
+                </nav>
+                <section class="list-section">
                     <table class="list-table incoming">
                         <tr>
                             <td colspan="3" class="list-table-title">
@@ -257,9 +255,9 @@
                             </td>
                         </tr>
                     </table>
+                </section>
 
-                </main>
-            </div>
+            </main>
         </div>
     </body>
 </html>
