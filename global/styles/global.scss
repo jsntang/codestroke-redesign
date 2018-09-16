@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    background: #FFF5EE;
+    background: #FCF6F2;
 }
 
 input, textarea {
@@ -188,14 +188,15 @@ $menu-time: 0.5s;
     position: fixed;
     top: 0;
     bottom: 0;
-    width: 80vw;
+    width: 70vw;
     @include for-tablet-portrait-up {
-        max-width: 450px;
+        max-width: 300px;
     }
 
     z-index: $header-z + 2; //Higher than header
 
-    background: #FFDAB9;
+    background: #FF7610;
+	
 
     transform: translateX(-100%);
     transition: transform $menu-time;
@@ -217,22 +218,22 @@ $menu-time: 0.5s;
 
         display: flex;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: flex-end;
+		margin-right: 0.5rem;
 
         font-size: 1.5rem;
         @include for-tablet-portrait-up {
             font-size: 2rem;
         }
-        color: black;
-        font-weight: bold;
-
-        background: rgba(#ff730a, .1);
+        color: white;
+:
+        background: rgba(#ff730a, .5);
 
         cursor: pointer;
 
         i {
-            margin-right: 1rem;
-            font-size: 3rem;
+            margin-right: 0rem;
+            font-size: 2.5rem;
         }
     }
 
@@ -254,19 +255,24 @@ $menu-time: 0.5s;
     }
 
     &-button {
-        margin-bottom: 1.25rem;
+        margin-bottom: 1rem;
 
         height: 5rem;
         width: 100%;
 
-        background: #ff9a41;
-
-        @extend %flex-center;
+        background: #FF7610;
+		
+		
+		display: flex;
+        align-items: center;
+        justify-content: flex-start;
 
         font-size: 1.8rem;
+		color: white;
+		font-weight: 500;
 
         * {
-            margin-left: 1rem;
+            margin-left: 2rem;
         }
     }
 }
